@@ -1,4 +1,4 @@
-import Notiflix from 'notiflix';
+import Notiflix, { Notify } from 'notiflix';
 import { fetchBreeds, fetchCatByBreed } from './cat-api';
 import SlimSelect from 'slim-select';
 import 'slim-select/dist/slimselect.css';
@@ -11,8 +11,16 @@ const selectError = document.querySelector('.error');
 selectLoader.classList.add('is-hidden');
 selectError.classList.add('is-hidden');
 
-function createCatInfo(event) {
+selectBreedElement.addEventListener('change', createCatInfo);
 
+function createCatInfo(event) {
+    selectLoader.classList.replace('is-hidden');
+
+    const breedId = event.currentTarget.value;
+
+    fetchCatByBreed(breedId)
+        .then()
+        .catch(onError);
 };
 
 function addSelectors(data) {
@@ -21,4 +29,9 @@ function addSelectors(data) {
         .catch(onError);
 };
 
-function onError() { };
+function onError() {
+    selectBreedElement.classList.remove('is-hidden');
+    selectLoader.classList.replace('loader', 'is-hidden');
+
+    Notify.failure('Oops! Something went wrong!');
+};
