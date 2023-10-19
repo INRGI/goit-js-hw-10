@@ -7,3 +7,18 @@ const selectBreedElement = document.querySelector('.breed-select');
 const selectLoader = document.querySelector('.loader');
 const selectCatInfo = document.querySelector('.cat-info');
 const selectError = document.querySelector('.error');
+
+selectLoader.classList.add('is-hidden');
+selectError.classList.add('is-hidden');
+
+function createCatInfo(event) {
+
+};
+
+function addSelectors(data) {
+    fetchBreeds(data)
+        .then()
+        .catch(onError);
+};
+
+function onError() { };
