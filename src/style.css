@@ -1,6 +1,14 @@
-
-
-
+.container{
+  margin: 30px;
+}
+.loader{
+  margin-top: 40px;
+  text-align: center;
+}
+.cat-info{
+  margin-top: 40px;
+  text-align: center;
+}
 
 .is-hidden {
   display: none;
