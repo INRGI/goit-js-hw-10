@@ -7,9 +7,17 @@
 }
 .cat-info{
   margin-top: 40px;
-  text-align: center;
+  display: flex;
+  gap: 20px;
+}
+img{
+  border-radius: 15%;
 }
 
 .is-hidden {
   display: none;
+}
+
+.box{
+  margin-top: 20px;
 }

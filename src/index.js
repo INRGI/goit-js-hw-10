@@ -27,7 +27,7 @@ function createCatInfo(event) {
 
             const { url, breeds } = data[0];
 
-            selectCatInfo.innerHTML = `<img src="${url}" alt="${breeds[0].name}" width="400"/><div class="box"><h2>${breeds[0].name}</h2><p>${breeds[0].description}</p><p><strong>Temperament:</strong> ${breeds[0].temperament}</p></div>`;
+            selectCatInfo.innerHTML = `<img src="${url}" alt="${breeds[0].name}" width="400" class="cat-img"/><div class="box"><h2>${breeds[0].name}</h2><p>${breeds[0].description}</p><p><strong>Temperament:</strong> ${breeds[0].temperament}</p></div>`;
             selectLoader.classList.add('loader', 'is-hidden')
             selectCatInfo.classList.remove('is-hidden');
         })
