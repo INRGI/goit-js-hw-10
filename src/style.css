@@ -1,17 +1,24 @@
 .container{
-  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.ss-main{
+  padding-top: 40px;
+  max-width: 650px;
+  margin: 0 auto;
 }
 .loader{
   margin-top: 40px;
   text-align: center;
 }
 .cat-info{
-  margin-top: 40px;
-  display: flex;
-  gap: 20px;
-}
-img{
-  border-radius: 15%;
+  border-radius: 0 7px 10px 7px;
+  background-color: #ffffff;
+  padding: 20px;
+  text-align: center;
 }
 
 .is-hidden {
@@ -19,5 +26,52 @@ img{
 }
 
 .box{
-  margin-top: 20px;
+  height: 420px;
+  width: 854px;
+  margin: 50px auto;
+  border-radius: 7px 7px 7px 7px;
+  -webkit-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+}
+.cat-img{
+  float: left;
+  height: 420px;
+  width: auto;
+  max-width: 524px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cat-img img{
+  border-radius: 7px 0 0 7px;
+  width: auto;
+}
+.cat-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 5px;
+  margin-right: 5px;
+}
+.cat-text h1 {
+  font-size: 34px;
+  color: #474747;
+}
+
+.cat-text h2 {
+  font-size: 24px;
+  color: #474747;
+}
+
+.cat-text p {
+  height: 125px;
+  font-family: 'Playfair Display', serif;
+  color: #000000;
+  line-height: 1.7em;
+  font-size: 15px;
+  font-weight: lighter;
+  overflow: hidden;
 }

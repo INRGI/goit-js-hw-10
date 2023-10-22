@@ -19,7 +19,6 @@ function createCatInfo(event) {
     selectLoader.classList.remove('is-hidden');
     selectCatInfo.classList.add('is-hidden');
     const breedId = event.currentTarget.value;
-
     fetchCatByBreed(breedId)
         .then(data => {
             selectLoader.classList.replace('loader', 'is-hidden');
@@ -27,7 +26,7 @@ function createCatInfo(event) {
 
             const { url, breeds } = data[0];
 
-            selectCatInfo.innerHTML = `<img src="${url}" alt="${breeds[0].name}" width="400" class="cat-img"/><div class="box"><h2>${breeds[0].name}</h2><p>${breeds[0].description}</p><p><strong>Temperament:</strong> ${breeds[0].temperament}</p></div>`;
+            selectCatInfo.innerHTML = `<div class="box"><div class="cat-img"><img src="${url}" alt="${breeds[0].name}" height="420" width="327" /></div><div class="cat-text"><h1>${breeds[0].name}</h1><p>${breeds[0].description}</p><h2>Temperament:</h2> <p>${breeds[0].temperament}</p></div></div>`;
             selectLoader.classList.add('loader', 'is-hidden')
             selectCatInfo.classList.remove('is-hidden');
         })
@@ -51,7 +50,7 @@ function addSelectors(data) {
 
 function onError() {
     selectBreedElement.classList.add('is-hidden');
-    selectLoader.classList.replace('loader', 'is-hidden');
+    selectLoader.classList.add('loader', 'is-hidden');
 
     Notify.failure('Oops! Something went wrong!');
 };
