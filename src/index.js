@@ -17,7 +17,7 @@ addSelectors();
 
 function createCatInfo(event) {
     selectLoader.classList.remove('is-hidden');
-
+    selectCatInfo.classList.add('is-hidden');
     const breedId = event.currentTarget.value;
 
     fetchCatByBreed(breedId)
